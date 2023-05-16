@@ -18,6 +18,9 @@ public class AddressRestController {
     int tmp_out = 59800;
     System.out.println(trimTrailingZero(tmp_out));
 
+    int tmpOut = 59800;
+    System.out.println(trimTrailingZero(tmpOut));
+
     return addressRestService.getAddress();
   }
 
