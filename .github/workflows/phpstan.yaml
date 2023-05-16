@@ -1,0 +1,11 @@
+name: phpstan
+
+on: [push, pull_request]
+
+jobs:
+  php-stan-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: pwd; find  ./
+      - run: docker run --rm -v `pwd`:/app -w /app ghcr.io/phpstan/phpstan analyse -c ./conf/phpstan.neon
