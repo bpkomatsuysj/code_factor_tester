@@ -24,13 +24,11 @@ public class AddressRestController {
     return addressRestService.getAddress();
   }
 
-  /**
-   * 末尾のゼロをトリムします.
-   * 
-   * @param number トリムする数字
-   * @return トリム後の文字列
-   */
   public static String trimTrailingZero(int number) {
+    return String.valueOf(number).replaceAll("0+$", CommonConsts.EMPTY);
+  }
+
+  public static String TrimTrailingZero(int number) {
     return String.valueOf(number).replaceAll("0+$", CommonConsts.EMPTY);
   }
 }
