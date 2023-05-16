@@ -15,11 +15,15 @@ public class AddressRestController {
   @GetMapping("/address")
   public String getAddress() {
 
-    int tmp_out = 59800;
-    System.out.println(trimTrailingZero(tmp_out));
+    int int_out = 59800;
+    System.out.println(trimTrailingZero(int_out));
 
-    int tmpOut = 59800;
-    System.out.println(trimTrailingZero(tmpOut));
+    int intOut = 59800;
+    System.out.println(trimTrailingZero(intOut));
+
+    if (int_out == intOut) {
+      return "";
+    }
 
     return addressRestService.getAddress();
   }
