@@ -1,0 +1,9 @@
+server:
+  servlet:
+    context-path: /sample
+  port: 8083
+proxy:
+  host: proxy.dummy.co.jp
+  port: 8080
+  user: dummy
+  password: dummy
