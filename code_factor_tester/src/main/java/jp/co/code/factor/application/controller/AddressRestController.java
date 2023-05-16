@@ -15,22 +15,24 @@ public class AddressRestController {
   @GetMapping("/address")
   public String getAddress() {
 
-    int tmp_out = 59800;
-    System.out.println(trimTrailingZero(tmp_out));
+    int int_out = 59800;
+    System.out.println(trimTrailingZero(int_out));
 
-    int tmpOut = 59800;
-    System.out.println(trimTrailingZero(tmpOut));
+    int intOut = 59800;
+    System.out.println(trimTrailingZero(intOut));
+
+    if (int_out == intOut) {
+      return "";
+    }
 
     return addressRestService.getAddress();
   }
 
-  /**
-   * 末尾のゼロをトリムします.
-   * 
-   * @param number トリムする数字
-   * @return トリム後の文字列
-   */
   public static String trimTrailingZero(int number) {
+    return String.valueOf(number).replaceAll("0+$", CommonConsts.EMPTY);
+  }
+
+  public static String TrimTrailingZero(int number) {
     return String.valueOf(number).replaceAll("0+$", CommonConsts.EMPTY);
   }
 }
